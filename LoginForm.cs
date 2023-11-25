@@ -59,10 +59,32 @@ namespace McdonaldDesktopApp
             else if (textBox1.Text == "" && textBox3.Text == "")
             {
                 MessageBox.Show("Masukkan akun anda", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                textBox1.Clear();
+                textBox3.Clear();
             }
             else
             {
                 MessageBox.Show("Akun anda salah", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                textBox1.Clear();
+                textBox3.Clear();
+            }
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Yakin Ingin Keluar?", "Warning!", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                DialogResult dialogResult2 = MessageBox.Show("Apakah kamu ingin membersihkan kolom text?", "Warning!", MessageBoxButtons.YesNo);
+                if (dialogResult2 == DialogResult.Yes)
+                {
+                    textBox1.Clear();
+                    textBox3.Clear();
+                }
             }
         }
     }

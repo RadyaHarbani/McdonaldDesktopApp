@@ -16,6 +16,7 @@ namespace McdonaldDesktopApp
         public TextBox textBoxSatu;
         public TextBox textBoxDua;
         public TextBox textBoxTiga;
+        public DateTimePicker dateTimePicker;
         public AddDataSection()
         {
             InitializeComponent();
@@ -24,6 +25,7 @@ namespace McdonaldDesktopApp
             textBoxSatu = textBox1;
             textBoxDua = textBox2;
             textBoxTiga = textBox3;
+            dateTimePicker = dateTimePicker1;
         }
 
         public string TextBoxSatuValue
@@ -41,6 +43,11 @@ namespace McdonaldDesktopApp
             get { return textBoxTiga.Text; }
         }
 
+        public string DateTimePickerValue
+        {
+            get { return dateTimePicker1.Value.Date.ToShortDateString() ; }
+        }
+
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
             if (!DashboardForm.Instance.pnlController.Controls.ContainsKey("ProfileSection"))
@@ -53,6 +60,7 @@ namespace McdonaldDesktopApp
                 profileSectionInstance.NoHp = textBoxSatu.Text;
                 profileSectionInstance.Kota = textBoxDua.Text;
                 profileSectionInstance.Lahir = textBoxTiga.Text;
+                profileSectionInstance.LahirDua = dateTimePicker.Value.Date.ToShortDateString();
                 profileSectionInstance.UpdateMcdonaldsList();
             }
             DashboardForm.Instance.pnlController.Controls["ProfileSection"].BringToFront();

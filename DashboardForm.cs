@@ -99,5 +99,12 @@ namespace McdonaldDesktopApp
 
             profileSection.UpdateMcdonaldsList();
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            LoginForm login = new LoginForm(usernameD, passwordD, emailD);
+            login.Show();
+            this.Hide();
+        }
     }
 }

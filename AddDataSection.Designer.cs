@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddDataSection));
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -39,6 +39,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.bunifuCards1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,8 +50,9 @@
             this.bunifuCards1.BottomSahddow = true;
             this.bunifuCards1.BottomShadow = true;
             this.bunifuCards1.color = System.Drawing.Color.Transparent;
-            this.bunifuCards1.Controls.Add(this.bunifuThinButton21);
+            this.bunifuCards1.Controls.Add(this.dateTimePicker1);
             this.bunifuCards1.Controls.Add(this.textBox3);
+            this.bunifuCards1.Controls.Add(this.bunifuThinButton21);
             this.bunifuCards1.Controls.Add(this.label7);
             this.bunifuCards1.Controls.Add(this.textBox2);
             this.bunifuCards1.Controls.Add(this.label6);
@@ -68,6 +70,15 @@
             this.bunifuCards1.ShadowDepth = 20;
             this.bunifuCards1.Size = new System.Drawing.Size(756, 507);
             this.bunifuCards1.TabIndex = 0;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.dateTimePicker1.Location = new System.Drawing.Point(60, 319);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(629, 27);
+            this.dateTimePicker1.TabIndex = 22;
             // 
             // bunifuThinButton21
             // 
@@ -93,17 +104,6 @@
             this.bunifuThinButton21.TabIndex = 21;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox3.Location = new System.Drawing.Point(49, 310);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(652, 40);
-            this.textBox3.TabIndex = 20;
             // 
             // label7
             // 
@@ -178,6 +178,18 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Lengkapi Profilmu";
             // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox3.Location = new System.Drawing.Point(49, 313);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(652, 40);
+            this.textBox3.TabIndex = 23;
+            // 
             // AddDataSection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -194,7 +206,6 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuCards bunifuCards1;
-        private TextBox textBox3;
         private Label label7;
         private TextBox textBox2;
         private Label label6;
@@ -203,5 +214,7 @@
         private Label label2;
         private Label label1;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
+        private DateTimePicker dateTimePicker1;
+        private TextBox textBox3;
     }
 }

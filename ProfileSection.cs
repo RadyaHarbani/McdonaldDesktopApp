@@ -22,6 +22,7 @@ namespace McdonaldDesktopApp
         private string noHandphoneProfile;
         private string alamatKota;
         private string tanggalLahir;
+        private string lahirDua;
 
 
         public ProfileSection()
@@ -83,6 +84,7 @@ namespace McdonaldDesktopApp
             label8.Text = noHandphoneProfile;
             label10.Text = alamatKota;
             label12.Text = tanggalLahir;
+            label12.Text = lahirDua;
         }
 
         public string Username
@@ -125,6 +127,14 @@ namespace McdonaldDesktopApp
             }
         }
 
+        public string LahirDua
+        {
+            set
+            {
+                lahirDua = value;
+            }
+        }
+
         private void ProfileSection_Load(object sender, EventArgs e)
         {
 
@@ -138,6 +148,11 @@ namespace McdonaldDesktopApp
                 DashboardForm.Instance.pnlController.Controls.Add(addDataSection);
             }
             DashboardForm.Instance.pnlController.Controls["AddDataSection"].BringToFront();
+        }
+
+        private void bunifuThinButton22_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
         }
     }
 }
